@@ -1,0 +1,5 @@
+requests
+lxml
+jieba
+wordcloud
+matplotlib
