@@ -64,7 +64,7 @@
 - `./data/{movie_name}/comments.json`：存储爬取的影评数据。
 - `./data/{movie_name}/wordcloud.png`：存储生成的词云图。
 
-## 🆘 问题与反馈
+##❗ 问题与反馈
 
 如果在项目使用过程中遇到任何问题，或者有好的建议和想法，欢迎提出 [issue](https://github.com/king-wang123/Douban-MovieReview-Crawler/issues)。作者会及时查看并处理。👀
 
