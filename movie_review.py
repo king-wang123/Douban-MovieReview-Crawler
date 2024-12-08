@@ -116,8 +116,9 @@ def get_movie_review_by_url(url):
 def get_movie_review(movie_id):
     comments_dict = []
     page = 0
+    limit = 20
     while True:
-        url = f'https://movie.douban.com/subject/{movie_id}/comments?start={page}&limit=50&sort=new_score&status=P'
+        url = f'https://movie.douban.com/subject/{movie_id}/comments?start={page}&limit={limit}&&sort=new_score&status=P'
         print(url)
 
         tmp_comments_dict = get_movie_review_by_url(url)
@@ -125,7 +126,7 @@ def get_movie_review(movie_id):
             break
         comments_dict.extend(tmp_comments_dict)
 
-        page += 50
+        page += limit
         t.sleep(random.uniform(1, 3)) # 随机等待时间是0.5秒和1秒之间的一个小数
 
     print("==================影评获取完毕===================")
