@@ -94,7 +94,10 @@ def get_movie_review_by_url(url):
             continue
         upvote = comment_div.xpath('.//span[@class="votes vote-count"]/text()')[0].strip()
         time = comment_div.xpath('.//span[@class="comment-time "]/@title')[0]
-        # location = comment_div.xpath('.//span[@class="comment-location"]/text()')[0].strip()
+        try:
+            location = comment_div.xpath('.//span[@class="comment-location"]/text()')[0].strip()
+        except:
+            location = ''
         
         try:
             star_attribute = comment_div.xpath('.//span[contains(@class,"rating")]/@class')[0]
