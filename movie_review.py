@@ -9,47 +9,46 @@ from statistic import MovieReviewStatistic
 
 def get_html(url):
     cookies = {
-    'bid': '1gMxgR_xU5U',
-    'll': '"118282"',
-    'Hm_lvt_19fc7b106453f97b6a84d64302f21a04': '1733372099',
-    '_ga_PRH9EWN86K': 'GS1.2.1733372100.1.0.1733372100.0.0.0',
-    '_pk_id.100001.4cf6': '024b110d1382e475.1733372159.',
-    '__yadk_uid': 'qBGjSnLZknbXZA3ugKLSpQd9RbCSfoz1',
-    '_vwo_uuid_v2': 'D8DB7696A3F6AD5AF442F89BBAA685C83|ba3269f7a883157ff71737fd00d2c8c0',
-    '_ga': 'GA1.1.857826835.1733372040',
-    '_ga_Y4GN1R87RG': 'GS1.1.1735141304.2.1.1735141359.0.0.0',
-    'ap_v': '0,6.0',
-    '_pk_ref.100001.4cf6': '%5B%22%22%2C%22%22%2C1740574727%2C%22https%3A%2F%2Fm.douban.com%2F%22%5D',
-    '_pk_ses.100001.4cf6': '1',
-    'dbcl2': '"224267170:eEXqtpqkCjk"',
-    'ck': 'N56a',
-    '__utma': '30149280.857826835.1733372040.1735269501.1740574756.6',
-    '__utmb': '30149280.0.10.1740574756',
-    '__utmc': '30149280',
-    '__utmz': '30149280.1740574756.6.4.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/',
-    '__utma': '223695111.857826835.1733372040.1735269501.1740574756.6',
-    '__utmb': '223695111.0.10.1740574756',
-    '__utmc': '223695111',
-    '__utmz': '223695111.1740574756.6.4.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/',
-    'push_noty_num': '0',
-    'push_doumail_num': '0',
-}
+        'bid': '1gMxgR_xU5U',
+        'll': '"118282"',
+        'Hm_lvt_19fc7b106453f97b6a84d64302f21a04': '1733372099',
+        '_ga_PRH9EWN86K': 'GS1.2.1733372100.1.0.1733372100.0.0.0',
+        '_pk_id.100001.8cb4': 'b471986e3f50b77b.1733372155.',
+        '_vwo_uuid_v2': 'D8DB7696A3F6AD5AF442F89BBAA685C83|ba3269f7a883157ff71737fd00d2c8c0',
+        '_ga': 'GA1.1.857826835.1733372040',
+        '_ga_Y4GN1R87RG': 'GS1.1.1735141304.2.1.1735141359.0.0.0',
+        'dbcl2': '"224267170:eEXqtpqkCjk"',
+        'push_noty_num': '0',
+        'push_doumail_num': '0',
+        'ck': 'N56a',
+        'ap_v': '0,6.0',
+        '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1742305309%2C%22https%3A%2F%2Fsearch.douban.com%2Fmovie%22%5D',
+        '_pk_ses.100001.8cb4': '1',
+        'frodotk_db': '"5321b30168c70291f96519043a5507b3"',
+        '__yadk_uid': 'gOqlfIhhHdGTu9Q4DmnXxqLQBNZrSMFz',
+        '__utma': '30149280.857826835.1733372040.1740574756.1742305312.7',
+        '__utmc': '30149280',
+        '__utmz': '30149280.1742305312.7.5.utmcsr=search.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/movie',
+        '__utmv': '30149280.22426',
+        '__utmb': '30149280.8.10.1742305312',
+    }
 
     headers = {
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en,zh-CN;q=0.9,zh;q=0.8',
-    'priority': 'u=0, i',
-    'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-    # 'cookie': 'bid=1gMxgR_xU5U; ll="118282"; Hm_lvt_19fc7b106453f97b6a84d64302f21a04=1733372099; _ga_PRH9EWN86K=GS1.2.1733372100.1.0.1733372100.0.0.0; _pk_id.100001.4cf6=024b110d1382e475.1733372159.; __yadk_uid=qBGjSnLZknbXZA3ugKLSpQd9RbCSfoz1; _vwo_uuid_v2=D8DB7696A3F6AD5AF442F89BBAA685C83|ba3269f7a883157ff71737fd00d2c8c0; _ga=GA1.1.857826835.1733372040; _ga_Y4GN1R87RG=GS1.1.1735141304.2.1.1735141359.0.0.0; ap_v=0,6.0; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1740574727%2C%22https%3A%2F%2Fm.douban.com%2F%22%5D; _pk_ses.100001.4cf6=1; dbcl2="224267170:eEXqtpqkCjk"; ck=N56a; __utma=30149280.857826835.1733372040.1735269501.1740574756.6; __utmb=30149280.0.10.1740574756; __utmc=30149280; __utmz=30149280.1740574756.6.4.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utma=223695111.857826835.1733372040.1735269501.1740574756.6; __utmb=223695111.0.10.1740574756; __utmc=223695111; __utmz=223695111.1740574756.6.4.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; push_noty_num=0; push_doumail_num=0',
-}
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept-language': 'en,zh-CN;q=0.9,zh;q=0.8',
+        'cache-control': 'max-age=0',
+        'priority': 'u=0, i',
+        'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'none',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+        # 'cookie': 'bid=1gMxgR_xU5U; ll="118282"; Hm_lvt_19fc7b106453f97b6a84d64302f21a04=1733372099; _ga_PRH9EWN86K=GS1.2.1733372100.1.0.1733372100.0.0.0; _pk_id.100001.8cb4=b471986e3f50b77b.1733372155.; _vwo_uuid_v2=D8DB7696A3F6AD5AF442F89BBAA685C83|ba3269f7a883157ff71737fd00d2c8c0; _ga=GA1.1.857826835.1733372040; _ga_Y4GN1R87RG=GS1.1.1735141304.2.1.1735141359.0.0.0; dbcl2="224267170:eEXqtpqkCjk"; push_noty_num=0; push_doumail_num=0; ck=N56a; ap_v=0,6.0; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1742305309%2C%22https%3A%2F%2Fsearch.douban.com%2Fmovie%22%5D; _pk_ses.100001.8cb4=1; frodotk_db="5321b30168c70291f96519043a5507b3"; __yadk_uid=gOqlfIhhHdGTu9Q4DmnXxqLQBNZrSMFz; __utma=30149280.857826835.1733372040.1740574756.1742305312.7; __utmc=30149280; __utmz=30149280.1742305312.7.5.utmcsr=search.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/movie; __utmv=30149280.22426; __utmb=30149280.8.10.1742305312',
+    }
     return requests.get(url=url, cookies=cookies, headers=headers).text
 
 def get_movie_id(movie_name):
@@ -71,7 +70,7 @@ def get_movie_review_by_url(url):
 
     tree = etree.HTML(get_html(url))
 
-    comment_list = tree.xpath('//div[@class="comment-item "]')
+    comment_list = tree.xpath('//div[@class="comment-item"]')
     if len(comment_list) == 0:
         return comments_dict
     
@@ -81,11 +80,11 @@ def get_movie_review_by_url(url):
         except:
             name = ''
         try:
-            content = comment_div.xpath('.//p[@class=" comment-content"]/span/text()')[0].strip()
+            content = comment_div.xpath('.//p[@class="comment-content"]/span/text()')[0].strip()
         except:
             continue
         upvote = comment_div.xpath('.//span[@class="votes vote-count"]/text()')[0].strip()
-        time = comment_div.xpath('.//span[@class="comment-time "]/@title')[0]
+        time = comment_div.xpath('.//span[@class="comment-time"]/@title')[0]
         try:
             location = comment_div.xpath('.//span[@class="comment-location"]/text()')[0].strip()
         except:

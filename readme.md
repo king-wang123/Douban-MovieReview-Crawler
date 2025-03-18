@@ -31,7 +31,7 @@
 
 ### 词云图示例
 
-![wordcloud](./data/readme/wordcloud.png)
+![wordcloud](./data/readme/wordcloud.png)![b](image.png)
 
 ## 🚀 功能亮点
 
