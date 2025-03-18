@@ -14,7 +14,7 @@
 
 ### 代码运行效果
 
-![usage](./data/readme/usage.png)
+![usage](./data/readme/example_usage.png)
 
 ### 影评数据示例
 
@@ -31,7 +31,7 @@
 
 ### 词云图示例
 
-![wordcloud](./data/readme/wordcloud.png)![b](image.png)
+![wordcloud](./data/readme/example_wordcloud.png)![b](image.png)
 
 ## 🚀 功能亮点
 
